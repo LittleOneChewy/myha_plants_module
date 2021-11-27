@@ -1,23 +1,22 @@
 # My Home Automation (MyHA).
-## Plants module.
-Developed using PlatformIO.  
+## Plants watering and temperature sensing module.
+Developed using PlatformIO.
 
-Module consists from:
-1. Power adapter (12V 10A).
-2. "PhitoLed" stripe.
-3. 3 channel DC-DC step-down power distribution board with transistor keys.
-4. Relay module board (4 relays).
-5. Two OLED displays.
-6. Temperature and Humidity sensor.
-7. Motion detection sensor.
-8. Wireless transmitter/reciever.
-9. 3 soil humidity sensors.
-10. 3 water pumps.
+## Purpose for the module
+1. Local temperature and humidity sensor with publishing data through MQTT
+2. Plants light control with light sensor and manual control via MQTT
+3. Measuring plants soil level and turn on water then needed
+
+## Module consists from:
+TBD
 
 ## How it works.
-12V line powers up DC-DC converter and one of the relay modules, connected to led stripe.  
-Ch1 of power distribution board gives 5v power directly to BluePill and motion detector.  
-Ch2 powers up soil sensors and 3 relays to water pumps.  
-Ch3 used to power up displays and temp/humidity sensor.  
+TBD
 
-...to be continued...
+## Changelog
+First attempt was done in 2019, using "Bluepill", some sensors, OLED display, DC motor pumps and crappy DC adapter. After a while the second version of module was developed. In major changes:
+1. Switching to ESP32 (ESP32-C3 coming)
+2. Replacing DC-motors with water solenoid valve and direct connection to water source
+3. Replacing OLED display with 8x2 LCD
+4. Replacing relays with mosfet to control LED power and brightness
+5. Replacing notebook-type DC adapter with more suitable one, which provides independent standby 5v@0.3A, power on control and stable 12v@12A output
